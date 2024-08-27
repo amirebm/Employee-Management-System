@@ -26,9 +26,9 @@
 
         public static Employee mapToEmployee(EmployeeDto employeeDto) {
             Employee employee = new Employee();
-            if (employeeDto.getId() != null) {
-                employee.setId(employeeDto.getId());
-            }
+//            if (employeeDto.getId() != null) {
+//                employee.setId(employeeDto.getId());
+//            }
             employee.setFirstName(employeeDto.getFirstname());
             employee.setLastName(employeeDto.getLastname());
             employee.setEmail(employeeDto.getEmail());
