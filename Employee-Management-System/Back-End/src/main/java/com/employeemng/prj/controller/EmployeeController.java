@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin("*")
 @AllArgsConstructor
 @RestController
 @RequestMapping("/api/employees")
@@ -47,7 +48,7 @@ public class EmployeeController {
         return ResponseEntity.ok(employeeDto);
     }
     //Build delete Employee Rest API
-    @DeleteMapping("{id}")  
+    @DeleteMapping("{id}")
     public ResponseEntity<String> deleteEmployee(@PathVariable("id") Long employeeId){
     employeeService.deleteEmployee(employeeId);
     return ResponseEntity.ok("Employee deleted successfully");
