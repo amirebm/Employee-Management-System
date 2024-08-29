@@ -8,6 +8,7 @@ import ListEmployeeComponent from "./Components/ListEmployeeComponent.jsx";
 import HeaderComponent from "./Components/HeaderComponent.jsx";
 import { FooterComponent} from "./Components/FooterComponent.jsx";
 import {BrowserRouter , Routes, Route} from 'react-router-dom'
+import EmployeeComponent from "./Components/EmployeeComponent.jsx";
 function App() {
   return (
     <>
@@ -18,6 +19,8 @@ function App() {
         <Route path="/" element={<ListEmployeeComponent />}></Route>
         {/* //http://localhost:8080/employees */}
         <Route path="/employees" element={<ListEmployeeComponent />}></Route>
+        {/* //http://localhost:8080/add-employee */}
+        <Route path="/add-employee" element={<EmployeeComponent />}></Route>
       </Routes>
       <FooterComponent />
     </BrowserRouter>   

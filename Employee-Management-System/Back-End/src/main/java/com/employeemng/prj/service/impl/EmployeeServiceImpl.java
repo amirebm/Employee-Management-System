@@ -47,8 +47,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         Employee employee=employeeRepository.findById(employeeId).orElseThrow(
                 ()-> new ResourceNotFoundException("Employee is not exist with the given Id: "+ employeeId));
 
-        employee.setFirstName(updatedEmployee.getFirstname());
-        employee.setLastName(updatedEmployee.getLastname());
+        employee.setFirstName(updatedEmployee.getFirstName());
+        employee.setLastName(updatedEmployee.getLastName());
         employee.setEmail(updatedEmployee.getEmail());
         Employee updatedEmployeeObj= employeeRepository.save(employee);
 

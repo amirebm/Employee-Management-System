@@ -29,8 +29,8 @@
 //            if (employeeDto.getId() != null) {
 //                employee.setId(employeeDto.getId());
 //            }
-            employee.setFirstName(employeeDto.getFirstname());
-            employee.setLastName(employeeDto.getLastname());
+            employee.setFirstName(employeeDto.getFirstName());
+            employee.setLastName(employeeDto.getLastName());
             employee.setEmail(employeeDto.getEmail());
             return employee;
         }
