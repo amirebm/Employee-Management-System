@@ -8,6 +8,6 @@ import ListEmployeeComponent from './Components/ListEmployeeComponent.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ListEmployeeComponent />
+    <App />
   </StrictMode>,
 )
