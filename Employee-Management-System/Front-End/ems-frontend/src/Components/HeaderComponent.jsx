@@ -7,7 +7,7 @@ const HeaderComponent = () => {
         <nav className="navbar navbar-dark bg-dark">
           <a
             className="navbar-brand"
-            href="https://www.linkedin.com/in/amir-mmoghadam/"
+            href="http://localhost:5173/"
           >
             {" "}
             Employee Management System

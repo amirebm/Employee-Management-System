@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { listEmployees } from "../services/EmployeeService";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 const ListEmployeeComponent = () => {
   const [employee, setEmployee] = useState([]);
   const navigator = useNavigate();
@@ -16,6 +16,10 @@ const ListEmployeeComponent = () => {
 
   function addNewEmployee() {
     navigator("/add-employee");
+  }
+
+  function updateEmployee(id){
+    navigator(`/edit-employee/ ${id}`)
   }
   //function ListEmployeeComponent() {
   // const DumyData = [
@@ -52,6 +56,7 @@ const ListEmployeeComponent = () => {
             <th>Employee First Name</th>
             <th>Employee Last Name</th>
             <th>Employee Email</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -61,6 +66,9 @@ const ListEmployeeComponent = () => {
               <td>{employee.firstName}</td>
               <td>{employee.lastName}</td>
               <td>{employee.email}</td>
+              <td>
+                <button className="btn btn-info" onClick={()=>updateEmployee(employee.id)}>Update</button>
+              </td>
             </tr>
           ))}
         </tbody>
